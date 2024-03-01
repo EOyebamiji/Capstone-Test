@@ -16,6 +16,7 @@ resource "aws_route_table" "private" {
       transit_gateway_id         = ""
       vpc_endpoint_id            = ""
       vpc_peering_connection_id  = ""
+      core_network_arn           = ""  # Add the necessary value here
     },
   ]
 
@@ -42,6 +43,7 @@ resource "aws_route_table" "public" {
       transit_gateway_id         = ""
       vpc_endpoint_id            = ""
       vpc_peering_connection_id  = ""
+      core_network_arn           = ""  # Add the necessary value here
     },
   ]
 
@@ -49,6 +51,7 @@ resource "aws_route_table" "public" {
     Name = "public"
   }
 }
+
 
 resource "aws_route_table_association" "private-us-east-1a" {
   subnet_id      = aws_subnet.private-us-east-1a.id

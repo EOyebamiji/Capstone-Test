@@ -81,6 +81,6 @@ sudo apt-get clean
 # Configure UFW
 print_colored "=== Configuring UFW ==="
 sudo ufw allow OpenSSH 
-sudo ufw enable
+sudo ufw enable -y
 sudo ufw allow 8080
 sudo ufw status

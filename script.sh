@@ -73,11 +73,6 @@ sudo systemctl enable jenkins
 sudo systemctl start jenkins
 sudo systemctl status jenkins
 
-# Clean up unnecessary files
-print_colored "=== Cleaning up unnecessary files ==="
-sudo apt-get autoremove -y
-sudo apt-get clean
-
 # Configure UFW
 print_colored "=== Configuring UFW ==="
 sudo ufw allow OpenSSH 

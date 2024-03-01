@@ -1,5 +1,5 @@
 resource "aws_eip" "nat" {
-  domain = vpc
+  domain = aws_vpc.main.id
 
   tags = {
     Name = "nat"

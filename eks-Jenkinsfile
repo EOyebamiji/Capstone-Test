@@ -19,6 +19,7 @@ pipeline {
                 script {
                     dir('eks-cluster') {
                         sh "terraform init"
+                        sh "terraform plan"
                         sh "terraform apply -auto-approve"
                     }
                 }

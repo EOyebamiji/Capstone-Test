@@ -12,6 +12,7 @@ pipeline {
                     dir('nginx-controller') {
                        sh "aws eks --region us-east-1 update-kubeconfig --name demo"
                         sh "terraform init"
+                        sh "terraform plan"
                         sh "terraform apply -auto-approve"
                     }
                 }
